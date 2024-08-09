@@ -30,5 +30,9 @@ public class productController {
 
     }
 
+    @PostMapping("/products")
+    Product createProduct(@RequestBody Product newProduct) {
+        return productRepository.save(newProduct);
+    }
 
 }
